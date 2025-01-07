@@ -32,9 +32,17 @@ export default function Page() {
             >
               React Animated Line Clamp
             </Link>{" "}
-            is a lightweight and zero-dependency package with React functional
-            component for animating text truncation with line clamping. This is
-            a demo of how it works with{" "}
+            is a lightweight and zero-dependency{" "}
+            <Link
+              href="https://www.npmjs.com/package/react-animated-line-clamp"
+              target="_blank"
+              variant={"underline"}
+              colorPalette={"teal"}
+            >
+              npm package
+            </Link>{" "}
+            with React functional component for animating text truncation with
+            line clamping. This is a demo of how it works with{" "}
             <Link
               href="https://nextjs.org/"
               target="_blank"
