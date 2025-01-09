@@ -21,9 +21,14 @@ export default function Page() {
   return (
     <>
       <Box p={4}>
-        <Stack as={Container} maxW={"6xl"} textAlign={"center"} padding={"20"}>
+        <Stack
+          as={Container}
+          maxW={"6xl"}
+          textAlign={"center"}
+          padding={{ base: "20px 0 40px 0", md: "20" }}
+        >
           <Heading fontSize={"3xl"}>React Animated Line Clamp Demo</Heading>
-          <Text color={"gray.600"} fontSize={"xl"}>
+          <Text color={"gray.600"} fontSize={{ base: "md", md: "xl" }}>
             <Link
               href="https://github.com/rybchynski/react-animated-line-clamp"
               target="_blank"
@@ -66,8 +71,12 @@ export default function Page() {
         <Container maxW={"6xl"}>
           <SimpleGrid columns={{ base: 1, md: 2 }} gap={2}>
             {examples.map((example) => (
-              <HStack align={"top"} mb={10} key={example.id}>
-                <Box color={"green.400"} px={2}>
+              <HStack align={"top"} mb={{ base: 5, md: 10 }} key={example.id}>
+                <Box
+                  color={"green.400"}
+                  px={2}
+                  display={{ base: "none", md: "block" }}
+                >
                   <Icon color="green" fontSize={20}>
                     <FaCheck />
                   </Icon>
@@ -80,7 +89,7 @@ export default function Page() {
                         color={"gray.600"}
                         fontSize={"md"}
                         fontWeight={400}
-                        textAlign={example.textAlign || "justify"}
+                        textAlign={{ base: "justify", md: "left" }}
                       >
                         {example.text}
                       </Text>
